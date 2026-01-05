@@ -50,7 +50,7 @@ jobs:
 
         run: |
           dotnet restore
-          dotnet run -c Release --project ./SEU_PROJETO/SEU_PROJETO.csproj
+          dotnet run -c Release --project ./EnvioEmailsEnglish/EnvioEmailsEnglish.csproj
 
       - name: Commit updated state/cache
         run: |
