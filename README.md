@@ -8,8 +8,6 @@ Este projeto automatiza o envio de **um e-mail diário para estudo de inglês**,
 
 ✅ Roda 1 vez por dia, no horário que você definir, **sem depender do seu PC ligado**.
 
-Repositório (open source): https://github.com/DevLucasMello/StudyEnglish
-
 ---
 
 ## O que foi implementado
