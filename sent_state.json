@@ -1,5 +1,34 @@
-{
-  "sent": [],
-  "blocked": {},
+﻿{
+  "sent": [
+    "selected",
+    "bonus",
+    "doc",
+    "this means that",
+    "square",
+    "starring",
+    "peer",
+    "auto",
+    "grad",
+    "jurisdiction"
+  ],
+  "blocked": {
+    "minerals": {
+      "word": "minerals",
+      "reason": "Item \u0027minerals\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-05T02:36:24.6725396Z",
+      "lastIso": "2026-01-05T02:36:24.6725654Z",
+      "count": 1
+    },
+    "bradley": {
+      "word": "bradley",
+      "reason": "Item \u0027bradley\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-05T02:36:26.0788034Z",
+      "lastIso": "2026-01-05T02:36:26.0788072Z",
+      "count": 1
+    }
+  },
+  "lastSentDate": "2026-01-05",
+  "lastRunIso": "2026-01-05T02:36:43.3310753Z",
+  "sendIteration": 1,
   "current": null
 }
