@@ -1,0 +1,2 @@
+C:\english\app\EnvioEmailsEnglish\EnvioEmailsEnglish\bin\Release\net8.0\win-x64\publish\EnvioEmailsEnglish.pdb
+C:\english\app\EnvioEmailsEnglish\EnvioEmailsEnglish\bin\Release\net8.0\win-x64\publish\EnvioEmailsEnglish.exe

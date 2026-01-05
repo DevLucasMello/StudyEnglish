@@ -1,0 +1,62 @@
+name: Daily English Email
+
+on:
+  schedule:
+    # GitHub Actions usa cron em UTC (sem timezone). Ajuste para seu horário (America/Sao_Paulo = UTC-3). :contentReference[oaicite:1]{index=1}
+    - cron: "0 10 * * *"  # 07:00 no Brasil (UTC-3)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-english-email
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Run app
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+
+          # Paths no repo (para persistir via commit)
+          VOCABULARY_PATH: "english-vocabulary.txt"
+          STATE_PATH: "sent_state.json"
+          DEEPL_CACHE_PATH: "deepl_sentence_cache.json"
+          BLOCKED_LOG_PATH: "blocked_words.log"
+
+          # Áudio
+          EMAIL_AUDIO_ENABLED: "true"
+          EMAIL_AUDIO_DIR: "audio"
+          EMAIL_AUDIO_VOICE_CULTURE: "en-US"
+
+        run: |
+          dotnet restore
+          dotnet run -c Release --project ./SEU_PROJETO/SEU_PROJETO.csproj
+
+      - name: Commit updated state/cache
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add sent_state.json deepl_sentence_cache.json blocked_words.log
+          git commit -m "chore: update daily state/cache" || echo "No changes"
+          git push
