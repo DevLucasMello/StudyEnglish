@@ -31,8 +31,13 @@
 // - Chaves DeepL "Free" normalmente terminam com ":fx" e usam api-free.deepl.com.
 // ------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
+using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Mail;
 using System.Reflection;
@@ -42,25 +47,71 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 public class Program
 {
     // =========================
     // Arquivos
     // =========================
-    private const string DefaultVocabularyPath = @"C:\english\english-vocabulary.txt";
-    private const string StatePath = @"C:\english\sent_state.json";
+// =========================
+// Arquivos (suporta GitHub Actions)
+// =========================
+// Defaults legados (Windows local)
+private const string LegacyDefaultVocabularyPath = @"C:\english\english-vocabulary.txt";
+private const string LegacyStatePath = @"C:\english\sent_state.json";
+private const string LegacyDeepLSentenceCachePath = @"C:\english\deepl_sentence_cache.json";
+private const string LegacyBlockedLogPath = @"C:\english\blocked_words.log";
+private const string LegacyDefaultAudioDir = @"C:\english\audio";
 
-    // Cache das traduções do DeepL (frases EN -> PT)
-    private const string DeepLSentenceCachePath = @"C:\english\deepl_sentence_cache.json";
+// Base de execução (no GitHub Actions normalmente vem em GITHUB_WORKSPACE)
+private static string WorkDir =>
+    Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") ??
+    Directory.GetCurrentDirectory();
 
-    // Log de palavras/frases que foram puladas por erro de formatação do modelo
-    private const string BlockedLogPath = @"C:\english\blocked_words.log";
+// Se vier relativo (ex: "sent_state.json"), resolve para dentro do WorkDir
+private static string ResolvePath(string pathOrRelative)
+{
+    if (string.IsNullOrWhiteSpace(pathOrRelative))
+        return pathOrRelative;
 
+    var p = pathOrRelative.Trim();
+    return Path.IsPathRooted(p) ? p : Path.Combine(WorkDir, p);
+}
 
-    // Áudio (opcional)
-    private const string DefaultAudioDir = @"C:\english\audio";
+// Arquivos usados no runtime (ENV tem prioridade)
+private static string DefaultVocabularyPath =>
+    ResolvePath(Environment.GetEnvironmentVariable("VOCABULARY_PATH") ?? LegacyDefaultVocabularyPath);
 
-    private const int ItemsPerDay = 10;
+private static string StatePath =>
+    ResolvePath(Environment.GetEnvironmentVariable("STATE_PATH") ?? LegacyStatePath);
+
+// Cache das traduções do DeepL (frases EN -> PT)
+private static string DeepLSentenceCachePath =>
+    ResolvePath(Environment.GetEnvironmentVariable("DEEPL_CACHE_PATH") ?? LegacyDeepLSentenceCachePath);
+
+// Log de palavras/frases que foram puladas por erro de formatação do modelo
+private static string BlockedLogPath =>
+    ResolvePath(Environment.GetEnvironmentVariable("BLOCKED_LOG_PATH") ?? LegacyBlockedLogPath);
+
+// Áudio (opcional)
+private static string DefaultAudioDir =>
+    ResolvePath(Environment.GetEnvironmentVariable("EMAIL_AUDIO_DIR")
+        ?? Environment.GetEnvironmentVariable("AUDIO_DIR")
+        ?? LegacyDefaultAudioDir);
+
+private static void EnsureParentDirectory(string filePath)
+{
+    try
+    {
+        var dir = Path.GetDirectoryName(filePath);
+        if (!string.IsNullOrWhiteSpace(dir))
+            Directory.CreateDirectory(dir);
+    }
+    catch
+    {
+        // ignore
+    }
+}private const int ItemsPerDay = 10;
 
     // =========================
     // Groq (OpenAI-compatible)
@@ -107,6 +158,8 @@ public class Program
         if (string.IsNullOrWhiteSpace(vocabPath))
             vocabPath = DefaultVocabularyPath;
 
+
+        vocabPath = ResolvePath(vocabPath);
         // Áudio por e-mail (opcional)
         var audioEnabled = EnvBool("EMAIL_AUDIO_ENABLED", EnvBool("AUDIO_ENABLED", defaultValue: true));
         var audioDir = Env("EMAIL_AUDIO_DIR", required: false);
@@ -434,7 +487,7 @@ public class Program
         return parsed;
     }
 
-
+    
     // =========================
     // Groq: geração resiliente (pula itens problemáticos)
     // =========================
@@ -541,6 +594,7 @@ public class Program
     {
         try
         {
+            EnsureParentDirectory(BlockedLogPath);
             var line = $"{DateTime.UtcNow:o}\t{word}\t{reason.Replace('\r', ' ').Replace('\n', ' ')}{Environment.NewLine}";
             File.AppendAllText(BlockedLogPath, line, Encoding.UTF8);
         }
@@ -572,7 +626,7 @@ public class Program
         return remaining[idx];
     }
 
-    private static string BuildGroqPrompt(List<string> pickRaw)
+private static string BuildGroqPrompt(List<string> pickRaw)
     {
         var list = string.Join("", pickRaw.Select(x => " - " + x));
 
@@ -926,6 +980,7 @@ Linhas:
     {
         try
         {
+            EnsureParentDirectory(path);
             var json = JsonSerializer.Serialize(dict, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(path, json, Encoding.UTF8);
         }
@@ -1352,6 +1407,7 @@ Linhas:
 
     private static void SaveState(string path, SentState state)
     {
+        EnsureParentDirectory(path);
         var json = JsonSerializer.Serialize(state, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(path, json, Encoding.UTF8);
     }

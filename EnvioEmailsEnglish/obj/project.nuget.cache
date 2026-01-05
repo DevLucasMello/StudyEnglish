@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4ZV9+xfi+D0=",
+  "dgSpecHash": "yY2jg9mR5UE=",
   "success": true,
   "projectFilePath": "C:\\english\\app\\EnvioEmailsEnglish\\EnvioEmailsEnglish\\EnvioEmailsEnglish.csproj",
   "expectedPackageFiles": [
@@ -13,17 +13,13 @@
     "C:\\nuget\\google.apis.auth\\1.73.0\\google.apis.auth.1.73.0.nupkg.sha512",
     "C:\\nuget\\google.apis.core\\1.73.0\\google.apis.core.1.73.0.nupkg.sha512",
     "C:\\nuget\\google.apis.drive.v3\\1.73.0.3996\\google.apis.drive.v3.1.73.0.3996.nupkg.sha512",
-    "C:\\nuget\\microsoft.net.illink.tasks\\8.0.20\\microsoft.net.illink.tasks.8.0.20.nupkg.sha512",
     "C:\\nuget\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
     "C:\\nuget\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
     "C:\\nuget\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
     "C:\\nuget\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\nuget\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
     "C:\\nuget\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
-    "C:\\nuget\\system.speech\\10.0.1\\system.speech.10.0.1.nupkg.sha512",
-    "C:\\nuget\\microsoft.netcore.app.runtime.win-x64\\8.0.20\\microsoft.netcore.app.runtime.win-x64.8.0.20.nupkg.sha512",
-    "C:\\nuget\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.20\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.20.nupkg.sha512",
-    "C:\\nuget\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.20\\microsoft.aspnetcore.app.runtime.win-x64.8.0.20.nupkg.sha512"
+    "C:\\nuget\\system.speech\\10.0.1\\system.speech.10.0.1.nupkg.sha512"
   ],
   "logs": []
 }
