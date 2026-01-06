@@ -9,7 +9,17 @@
     "peer",
     "auto",
     "grad",
-    "jurisdiction"
+    "jurisdiction",
+    "apartment",
+    "such that",
+    "cayman",
+    "reel",
+    "flash",
+    "hole",
+    "searched",
+    "government",
+    "partial",
+    "stating"
   ],
   "blocked": {
     "minerals": {
@@ -27,8 +37,8 @@
       "count": 1
     }
   },
-  "lastSentDate": "2026-01-05",
-  "lastRunIso": "2026-01-05T10:20:32.9593308Z",
-  "sendIteration": 1,
+  "lastSentDate": "2026-01-06",
+  "lastRunIso": "2026-01-06T10:19:17.5982130Z",
+  "sendIteration": 2,
   "current": null
 }
