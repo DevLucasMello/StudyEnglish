@@ -29,7 +29,17 @@
     "sea",
     "devices",
     "pending",
-    "in much the same way (as)"
+    "in much the same way (as)",
+    "bring round",
+    "enrolled",
+    "kathy",
+    "heavy",
+    "complexity",
+    "sender",
+    "fathers",
+    "caught",
+    "preference",
+    "grateful"
   ],
   "blocked": {
     "minerals": {
@@ -59,10 +69,24 @@
       "firstIso": "2026-01-07T10:19:37.8706581Z",
       "lastIso": "2026-01-07T10:19:37.8706614Z",
       "count": 1
+    },
+    "oven": {
+      "word": "oven",
+      "reason": "Item \u0027oven\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-08T10:20:06.9274877Z",
+      "lastIso": "2026-01-08T10:20:06.9275163Z",
+      "count": 1
+    },
+    "davidson": {
+      "word": "davidson",
+      "reason": "Groq n\u00E3o retornou item para \u0027davidson\u0027.",
+      "firstIso": "2026-01-08T10:20:08.7303331Z",
+      "lastIso": "2026-01-08T10:20:08.7303360Z",
+      "count": 1
     }
   },
-  "lastSentDate": "2026-01-07",
-  "lastRunIso": "2026-01-07T10:20:03.6177817Z",
-  "sendIteration": 3,
+  "lastSentDate": "2026-01-08",
+  "lastRunIso": "2026-01-08T10:20:25.1476938Z",
+  "sendIteration": 4,
   "current": null
 }
