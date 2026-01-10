@@ -49,7 +49,17 @@
     "dayton",
     "cells",
     "enlargement",
-    "lions"
+    "lions",
+    "once in a while",
+    "cut up",
+    "plant",
+    "attorney",
+    "mexico",
+    "wagon",
+    "since",
+    "mobile",
+    "blog",
+    "movies"
   ],
   "blocked": {
     "minerals": {
@@ -95,8 +105,8 @@
       "count": 1
     }
   },
-  "lastSentDate": "2026-01-09",
-  "lastRunIso": "2026-01-09T10:18:36.3206044Z",
-  "sendIteration": 5,
+  "lastSentDate": "2026-01-10",
+  "lastRunIso": "2026-01-10T10:16:50.4860030Z",
+  "sendIteration": 6,
   "current": null
 }
