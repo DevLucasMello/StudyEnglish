@@ -59,7 +59,17 @@
     "since",
     "mobile",
     "blog",
-    "movies"
+    "movies",
+    "some",
+    "atmosphere",
+    "dead",
+    "podcasts",
+    "(this) is not to say/suggest that",
+    "diagram",
+    "banking",
+    "zoloft",
+    "modify",
+    "phd"
   ],
   "blocked": {
     "minerals": {
@@ -105,8 +115,8 @@
       "count": 1
     }
   },
-  "lastSentDate": "2026-01-10",
-  "lastRunIso": "2026-01-10T10:16:50.4860030Z",
-  "sendIteration": 6,
+  "lastSentDate": "2026-01-11",
+  "lastRunIso": "2026-01-11T10:17:01.8259691Z",
+  "sendIteration": 7,
   "current": null
 }
