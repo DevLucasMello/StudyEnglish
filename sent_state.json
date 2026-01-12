@@ -69,7 +69,17 @@
     "banking",
     "zoloft",
     "modify",
-    "phd"
+    "phd",
+    "nav",
+    "profile",
+    "pee",
+    "electronic",
+    "passenger",
+    "foreign",
+    "silicon",
+    "does",
+    "unauthorized",
+    "suburban"
   ],
   "blocked": {
     "minerals": {
@@ -113,10 +123,17 @@
       "firstIso": "2026-01-08T10:20:08.7303331Z",
       "lastIso": "2026-01-08T10:20:08.7303360Z",
       "count": 1
+    },
+    "democrat": {
+      "word": "democrat",
+      "reason": "Item \u0027democrat\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-12T10:21:08.8463794Z",
+      "lastIso": "2026-01-12T10:21:08.8464053Z",
+      "count": 1
     }
   },
-  "lastSentDate": "2026-01-11",
-  "lastRunIso": "2026-01-11T10:17:01.8259691Z",
-  "sendIteration": 7,
+  "lastSentDate": "2026-01-12",
+  "lastRunIso": "2026-01-12T10:21:19.2965001Z",
+  "sendIteration": 8,
   "current": null
 }
