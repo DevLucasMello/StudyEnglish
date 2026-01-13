@@ -79,7 +79,17 @@
     "silicon",
     "does",
     "unauthorized",
-    "suburban"
+    "suburban",
+    "com",
+    "babes",
+    "microwave",
+    "sewing",
+    "america",
+    "garage",
+    "drag",
+    "confusion",
+    "balance",
+    "jesus"
   ],
   "blocked": {
     "minerals": {
@@ -130,10 +140,24 @@
       "firstIso": "2026-01-12T10:21:08.8463794Z",
       "lastIso": "2026-01-12T10:21:08.8464053Z",
       "count": 1
+    },
+    "soc": {
+      "word": "soc",
+      "reason": "Item \u0027soc\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-13T10:19:29.1628546Z",
+      "lastIso": "2026-01-13T10:19:29.1628805Z",
+      "count": 1
+    },
+    "tahoe": {
+      "word": "tahoe",
+      "reason": "Item \u0027tahoe\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-13T10:19:31.0305588Z",
+      "lastIso": "2026-01-13T10:19:31.0305622Z",
+      "count": 1
     }
   },
-  "lastSentDate": "2026-01-12",
-  "lastRunIso": "2026-01-12T10:21:19.2965001Z",
-  "sendIteration": 8,
+  "lastSentDate": "2026-01-13",
+  "lastRunIso": "2026-01-13T10:19:40.5602275Z",
+  "sendIteration": 9,
   "current": null
 }
