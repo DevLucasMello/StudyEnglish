@@ -89,7 +89,17 @@
     "drag",
     "confusion",
     "balance",
-    "jesus"
+    "jesus",
+    "revenues",
+    "trap",
+    "custody",
+    "colonial",
+    "trash",
+    "alias",
+    "valuable",
+    "connections",
+    "readers",
+    "pressed"
   ],
   "blocked": {
     "minerals": {
@@ -154,10 +164,17 @@
       "firstIso": "2026-01-13T10:19:31.0305588Z",
       "lastIso": "2026-01-13T10:19:31.0305622Z",
       "count": 1
+    },
+    "gamma": {
+      "word": "gamma",
+      "reason": "Item \u0027gamma\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-14T10:20:42.6950486Z",
+      "lastIso": "2026-01-14T10:20:42.6950734Z",
+      "count": 1
     }
   },
-  "lastSentDate": "2026-01-13",
-  "lastRunIso": "2026-01-13T10:19:40.5602275Z",
-  "sendIteration": 9,
+  "lastSentDate": "2026-01-14",
+  "lastRunIso": "2026-01-14T10:20:58.5087256Z",
+  "sendIteration": 10,
   "current": null
 }
