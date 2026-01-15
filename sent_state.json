@@ -99,7 +99,17 @@
     "valuable",
     "connections",
     "readers",
-    "pressed"
+    "pressed",
+    "be back",
+    "transition",
+    "advisory",
+    "tax",
+    "arguments",
+    "navigation",
+    "arctic",
+    "rug",
+    "stream",
+    "dakota"
   ],
   "blocked": {
     "minerals": {
@@ -173,8 +183,8 @@
       "count": 1
     }
   },
-  "lastSentDate": "2026-01-14",
-  "lastRunIso": "2026-01-14T10:20:58.5087256Z",
-  "sendIteration": 10,
+  "lastSentDate": "2026-01-15",
+  "lastRunIso": "2026-01-15T10:20:31.9122633Z",
+  "sendIteration": 11,
   "current": null
 }
