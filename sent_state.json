@@ -109,7 +109,17 @@
     "arctic",
     "rug",
     "stream",
-    "dakota"
+    "dakota",
+    "comedy",
+    "retirement",
+    "compared with/to",
+    "the meaning of",
+    "drug",
+    "sexual",
+    "policy",
+    "attitudes",
+    "soon",
+    "retention"
   ],
   "blocked": {
     "minerals": {
@@ -181,10 +191,31 @@
       "firstIso": "2026-01-14T10:20:42.6950486Z",
       "lastIso": "2026-01-14T10:20:42.6950734Z",
       "count": 1
+    },
+    "orleans": {
+      "word": "orleans",
+      "reason": "Item \u0027orleans\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-16T10:19:21.2676505Z",
+      "lastIso": "2026-01-16T10:19:21.2676657Z",
+      "count": 1
+    },
+    "moore": {
+      "word": "moore",
+      "reason": "Item \u0027moore\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-16T10:19:22.8177477Z",
+      "lastIso": "2026-01-16T10:19:22.8177507Z",
+      "count": 1
+    },
+    "cas": {
+      "word": "cas",
+      "reason": "Item \u0027cas\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-16T10:19:24.2824540Z",
+      "lastIso": "2026-01-16T10:19:24.2824569Z",
+      "count": 1
     }
   },
-  "lastSentDate": "2026-01-15",
-  "lastRunIso": "2026-01-15T10:20:31.9122633Z",
-  "sendIteration": 11,
+  "lastSentDate": "2026-01-16",
+  "lastRunIso": "2026-01-16T10:19:42.9499037Z",
+  "sendIteration": 12,
   "current": null
 }
