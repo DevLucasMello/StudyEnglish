@@ -119,7 +119,17 @@
     "policy",
     "attitudes",
     "soon",
-    "retention"
+    "retention",
+    "kingdom",
+    "relations",
+    "optimization",
+    "(and) you can see that",
+    "fuzzy",
+    "lover",
+    "divisions",
+    "rouge",
+    "amendment",
+    "turn out"
   ],
   "blocked": {
     "minerals": {
@@ -214,8 +224,8 @@
       "count": 1
     }
   },
-  "lastSentDate": "2026-01-16",
-  "lastRunIso": "2026-01-16T10:19:42.9499037Z",
-  "sendIteration": 12,
+  "lastSentDate": "2026-01-17",
+  "lastRunIso": "2026-01-17T10:16:46.5807668Z",
+  "sendIteration": 13,
   "current": null
 }
