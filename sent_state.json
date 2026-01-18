@@ -129,7 +129,17 @@
     "divisions",
     "rouge",
     "amendment",
-    "turn out"
+    "turn out",
+    "see",
+    "fat",
+    "well",
+    "marathon",
+    "mapping",
+    "eternal",
+    "spent",
+    "sexually",
+    "soccer",
+    "percent"
   ],
   "blocked": {
     "minerals": {
@@ -222,10 +232,24 @@
       "firstIso": "2026-01-16T10:19:24.2824540Z",
       "lastIso": "2026-01-16T10:19:24.2824569Z",
       "count": 1
+    },
+    "mls": {
+      "word": "mls",
+      "reason": "Item \u0027mls\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-18T10:17:37.6548673Z",
+      "lastIso": "2026-01-18T10:17:37.6548878Z",
+      "count": 1
+    },
+    "trembl": {
+      "word": "trembl",
+      "reason": "Item \u0027trembl\u0027 precisa retornar exatamente 5 exemplos EN.",
+      "firstIso": "2026-01-18T10:17:39.3384337Z",
+      "lastIso": "2026-01-18T10:17:39.3384646Z",
+      "count": 1
     }
   },
-  "lastSentDate": "2026-01-17",
-  "lastRunIso": "2026-01-17T10:16:46.5807668Z",
-  "sendIteration": 13,
+  "lastSentDate": "2026-01-18",
+  "lastRunIso": "2026-01-18T10:17:48.2807669Z",
+  "sendIteration": 14,
   "current": null
 }
