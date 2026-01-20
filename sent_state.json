@@ -149,7 +149,17 @@
     "(in) the context of",
     "motels",
     "receipt",
-    "approval"
+    "approval",
+    "missile",
+    "duplicate",
+    "the following the work of",
+    "opt",
+    "across",
+    "threat",
+    "actors",
+    "bus",
+    "guru",
+    "boring"
   ],
   "blocked": {
     "minerals": {
@@ -258,8 +268,8 @@
       "count": 1
     }
   },
-  "lastSentDate": "2026-01-19",
-  "lastRunIso": "2026-01-19T10:25:22.7472827Z",
-  "sendIteration": 15,
+  "lastSentDate": "2026-01-20",
+  "lastRunIso": "2026-01-20T10:23:25.3220016Z",
+  "sendIteration": 16,
   "current": null
 }
